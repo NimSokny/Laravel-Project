@@ -98,12 +98,11 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand): RedirectResponse
     {
-        $logo = $brand->logo;
-        $brand->delete();
-
-        if ($logo && Storage::disk('public')->exists($logo)) {
-            Storage::disk('public')->delete($logo);
+        if ($brand->logo && Storage::disk('public')->exists($brand->logo)) {
+            Storage::disk('public')->delete($brand->logo);
         }
+
+        $brand->delete();
 
         return redirect()
             ->route('admin.brands.index')
