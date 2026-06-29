@@ -1,1 +1,14 @@
 * text=auto eol=lf
+<<<<<<< HEAD
+=======
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
+>>>>>>> 035776170c352df97caa84a8828b1384bd315d79
