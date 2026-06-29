@@ -32,11 +32,11 @@ const emit = defineEmits<{
 }>()
 
 const selectClasses = computed(() => [
-  'w-full rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-0 appearance-none bg-white cursor-pointer',
+  'w-full rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-0 appearance-none bg-white cursor-pointer dark:bg-slate-800 dark:text-white',
   props.error
-    ? 'border-red-300 focus:border-red-500 focus:ring-red-500 bg-red-50'
-    : 'border-slate-300 focus:border-sky-500 focus:ring-sky-500',
-  props.disabled ? 'opacity-50 cursor-not-allowed bg-slate-100' : '',
+    ? 'border-red-300 focus:border-red-500 focus:ring-red-500 bg-red-50 dark:border-red-700 dark:bg-red-900/30'
+    : 'border-slate-300 focus:border-sky-500 focus:ring-sky-500 dark:border-slate-600',
+  props.disabled ? 'opacity-50 cursor-not-allowed bg-slate-100 dark:bg-slate-700' : '',
   props.size === 'sm' ? 'px-3 py-2 text-sm' : '',
   props.size === 'md' ? 'px-4 py-2.5 text-sm' : '',
   props.size === 'lg' ? 'px-4 py-3 text-base' : '',
@@ -45,7 +45,7 @@ const selectClasses = computed(() => [
 
 const labelClasses = computed(() => [
   'block text-sm font-semibold mb-2',
-  props.error ? 'text-red-600' : 'text-slate-700',
+  props.error ? 'text-red-600 dark:text-red-400' : 'text-slate-700 dark:text-slate-300',
 ])
 
 const handleChange = (event: Event) => {
@@ -81,7 +81,7 @@ const handleChange = (event: Event) => {
         </option>
       </select>
       <svg
-        class="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400 pointer-events-none"
+        class="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400 pointer-events-none dark:text-slate-500"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -90,6 +90,6 @@ const handleChange = (event: Event) => {
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
       </svg>
     </div>
-    <p v-if="error" class="mt-1.5 text-sm text-red-600">{{ error }}</p>
+    <p v-if="error" class="mt-1.5 text-sm text-red-600 dark:text-red-400">{{ error }}</p>
   </div>
 </template>

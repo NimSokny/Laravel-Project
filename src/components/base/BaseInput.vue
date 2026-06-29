@@ -33,10 +33,10 @@ const emit = defineEmits<{
 const inputClasses = computed(() => [
   'w-full rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-0',
   props.error
-    ? 'border-red-300 focus:border-red-500 focus:ring-red-500 bg-red-50'
-    : 'border-slate-300 focus:border-sky-500 focus:ring-sky-500 bg-white',
-  props.disabled ? 'opacity-50 cursor-not-allowed bg-slate-100' : '',
-  props.readonly ? 'bg-slate-50 cursor-default' : '',
+    ? 'border-red-300 focus:border-red-500 focus:ring-red-500 bg-red-50 dark:border-red-700 dark:bg-red-900/30'
+    : 'border-slate-300 focus:border-sky-500 focus:ring-sky-500 bg-white dark:border-slate-600 dark:bg-slate-800 dark:text-white',
+  props.disabled ? 'opacity-50 cursor-not-allowed bg-slate-100 dark:bg-slate-700' : '',
+  props.readonly ? 'bg-slate-50 cursor-default dark:bg-slate-700' : '',
   props.size === 'sm' ? 'px-3 py-2 text-sm' : '',
   props.size === 'md' ? 'px-4 py-2.5 text-sm' : '',
   props.size === 'lg' ? 'px-4 py-3 text-base' : '',
@@ -45,7 +45,7 @@ const inputClasses = computed(() => [
 
 const labelClasses = computed(() => [
   'block text-sm font-semibold mb-2',
-  props.error ? 'text-red-600' : 'text-slate-700',
+  props.error ? 'text-red-600 dark:text-red-400' : 'text-slate-700 dark:text-slate-300',
 ])
 
 const handleInput = (event: Event) => {
@@ -72,7 +72,7 @@ const handleBlur = (event: FocusEvent) => {
       <component
         v-if="icon"
         :is="icon"
-        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-slate-400 pointer-events-none"
+        class="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-slate-400 pointer-events-none dark:text-slate-500"
         aria-hidden="true"
       />
       <input
@@ -89,6 +89,6 @@ const handleBlur = (event: FocusEvent) => {
         @blur="handleBlur"
       />
     </div>
-    <p v-if="error" class="mt-1.5 text-sm text-red-600">{{ error }}</p>
+    <p v-if="error" class="mt-1.5 text-sm text-red-600 dark:text-red-400">{{ error }}</p>
   </div>
 </template>

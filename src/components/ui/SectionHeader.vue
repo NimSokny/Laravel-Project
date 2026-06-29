@@ -14,21 +14,18 @@ defineProps<{
     <div class="max-w-2xl mx-auto">
       <p
         v-if="eyebrow"
-        class="eyebrow mb-2"
-        :class="tone === 'dark' ? 'text-cyan-200' : ''"
+        class="eyebrow mb-2 text-sky-600 dark:text-sky-400"
       >
         {{ eyebrow }}
       </p>
       <h2
-        class="text-accent-lg"
-        :class="tone === 'dark' ? 'text-white' : 'text-zinc-950'"
+        class="text-accent-lg text-slate-900 dark:text-slate-100"
       >
         {{ title }}
       </h2>
       <p
         v-if="description"
-        class="mt-3 text-base leading-6 sm:text-lg lg:text-xl font-accent"
-        :class="tone === 'dark' ? 'text-zinc-300' : 'text-zinc-600'"
+        class="mt-3 text-base leading-6 sm:text-lg lg:text-xl font-accent text-slate-600 dark:text-slate-300"
       >
         {{ description }}
       </p>

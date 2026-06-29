@@ -19,10 +19,10 @@ const visible = ref(true)
 
 const variantClasses = computed(() => {
   const variants = {
-    info: 'bg-blue-50 border-blue-200 text-blue-800',
-    success: 'bg-emerald-50 border-emerald-200 text-emerald-800',
-    warning: 'bg-amber-50 border-amber-200 text-amber-800',
-    error: 'bg-red-50 border-red-200 text-red-800',
+    info: 'bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/30 dark:border-blue-700 dark:text-blue-200',
+    success: 'bg-emerald-50 border-emerald-200 text-emerald-800 dark:bg-emerald-900/30 dark:border-emerald-700 dark:text-emerald-200',
+    warning: 'bg-amber-50 border-amber-200 text-amber-800 dark:bg-amber-900/30 dark:border-amber-700 dark:text-amber-200',
+    error: 'bg-red-50 border-red-200 text-red-800 dark:bg-red-900/30 dark:border-red-700 dark:text-red-200',
   }
   return variants[props.variant]
 })
@@ -66,7 +66,7 @@ function dismiss() {
         <button
           v-if="dismissible"
           type="button"
-          class="shrink-0 p-1 rounded hover:bg-black/5 transition-colors"
+          class="shrink-0 p-1 rounded hover:bg-black/5 transition-colors dark:hover:bg-white/10"
           @click="dismiss"
           aria-label="Dismiss alert"
         >

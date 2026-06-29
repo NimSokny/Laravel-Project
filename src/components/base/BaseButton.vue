@@ -33,9 +33,9 @@ const baseClasses = computed(() => [
 const variantClasses = computed(() => {
   const variants = {
     primary: 'bg-sky-500 text-white hover:bg-sky-600 focus:ring-sky-500 shadow-sm',
-    secondary: 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 focus:ring-slate-500 shadow-sm',
+    secondary: 'bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 focus:ring-slate-500 shadow-sm dark:bg-slate-800 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-700',
     accent: 'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500 shadow-sm',
-    ghost: 'bg-transparent text-slate-600 hover:bg-slate-100 focus:ring-slate-500',
+    ghost: 'bg-transparent text-slate-600 hover:bg-slate-100 focus:ring-slate-500 dark:text-slate-300 dark:hover:bg-slate-800',
     danger: 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-500 shadow-sm',
   }
   return variants[props.variant]

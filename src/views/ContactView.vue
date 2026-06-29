@@ -25,8 +25,8 @@ function submitContact() {
     <div class="container-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
       <section>
         <p class="eyebrow">Contact us</p>
-        <h1 class="mt-3 page-title font-accent">Talk with the computer shop team</h1>
-        <p class="mt-5 text-base leading-7 text-zinc-600">
+        <h1 class="mt-3 page-title font-accent text-white dark:text-white">Talk with the computer shop team</h1>
+        <p class="mt-5 text-base leading-7 text-zinc-600 font-accent text-white dark:text-white">
           Ask about product compatibility, custom builds, warranty, stock availability, or an order
           you have already placed.
         </p>

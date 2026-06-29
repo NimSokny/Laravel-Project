@@ -12,40 +12,40 @@ const links = [
 </script>
 
 <template>
-  <footer class="border-t border-slate-200 bg-slate-50">
+  <footer class="border-t border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-900">
     <div class="container-shell grid gap-10 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
       <div>
         <RouterLink to="/" class="flex items-center gap-3">
           <img :src="logoImage" alt="TOPNOTCH Computer Solutions" class="h-14 w-auto object-contain" />
         </RouterLink>
-        <h3 class="mt-5 text-accent-md text-slate-900">Thank You for Visiting</h3>
-        <h4 class="mt-2 text-accent-sm text-slate-700">Let's Build Your Perfect Computer Together</h4>
-        <p class="mt-3 text-accent-xs text-slate-600">Built for Gamers, Creators, and Professionals</p>
-        <p class="mt-4 max-w-sm text-base leading-7 text-slate-600 font-accent">
+        <h3 class="mt-5 text-accent-md text-slate-900 dark:text-slate-100">Thank You for Visiting</h3>
+        <h4 class="mt-2 text-accent-sm text-slate-700 dark:text-slate-300">Let's Build Your Perfect Computer Together</h4>
+        <p class="mt-3 text-accent-xs text-slate-600 dark:text-slate-400">Built for Gamers, Creators, and Professionals</p>
+        <p class="mt-4 max-w-sm text-base leading-7 text-slate-600 font-accent dark:text-slate-400">
           Your trusted destination for laptops, gaming PCs, components, monitors, accessories, and
           reliable after-sales support.
         </p>
         <div class="mt-6 flex gap-3">
-          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors" aria-label="Facebook">
+          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-sky-600" aria-label="Facebook">
             <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors" aria-label="Twitter">
+          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-sky-600" aria-label="Twitter">
             <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
           </a>
-          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors" aria-label="Instagram">
+          <a href="#" class="flex size-11 items-center justify-center rounded-lg bg-slate-200 text-slate-600 hover:bg-sky-500 hover:text-white transition-colors dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-sky-600" aria-label="Instagram">
             <svg class="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
 
       <div>
-        <h2 class="text-base font-bold uppercase text-slate-900 tracking-wide font-accent">Shop</h2>
-        <div class="mt-5 grid gap-4 text-base text-slate-600 font-accent">
+        <h2 class="text-base font-bold uppercase text-slate-900 tracking-wide font-accent dark:text-slate-100">Shop</h2>
+        <div class="mt-5 grid gap-4 text-base text-slate-600 font-accent dark:text-slate-300">
           <RouterLink
             v-for="link in links"
             :key="link.to"
             :to="link.to"
-            class="transition-colors hover:text-sky-600"
+            class="transition-colors hover:text-sky-600 dark:hover:text-sky-400"
           >
             {{ link.label }}
           </RouterLink>
@@ -53,17 +53,17 @@ const links = [
       </div>
 
       <div>
-        <h2 class="text-base font-bold uppercase text-slate-900 tracking-wide font-accent">Contact</h2>
-        <div class="mt-5 grid gap-4 text-base text-slate-600 font-accent">
+        <h2 class="text-base font-bold uppercase text-slate-900 tracking-wide font-accent dark:text-slate-100">Contact</h2>
+        <div class="mt-5 grid gap-4 text-base text-slate-600 font-accent dark:text-slate-300">
           <p class="flex gap-3">
             <MapPin class="mt-0.5 size-5 shrink-0 text-sky-600" aria-hidden="true" />
             Phnom Penh, Cambodia
           </p>
-          <a class="flex gap-3 transition-colors hover:text-sky-600" href="tel:+85512345678">
+          <a class="flex gap-3 transition-colors hover:text-sky-600 dark:hover:text-sky-400" href="tel:+85512345678">
             <Phone class="mt-0.5 size-5 shrink-0 text-sky-600" aria-hidden="true" />
             +855 12 345 678
           </a>
-          <a class="flex gap-3 transition-colors hover:text-sky-600" href="mailto:support@computershop.test">
+          <a class="flex gap-3 transition-colors hover:text-sky-600 dark:hover:text-sky-400" href="mailto:support@computershop.test">
             <Mail class="mt-0.5 size-5 shrink-0 text-sky-600" aria-hidden="true" />
             support@computershop.test
           </a>
@@ -71,13 +71,13 @@ const links = [
       </div>
     </div>
 
-    <div class="border-t border-slate-200 py-6">
-      <div class="container-shell flex flex-col gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between font-accent">
+    <div class="border-t border-slate-200 py-6 dark:border-slate-700">
+      <div class="container-shell flex flex-col gap-3 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between font-accent dark:text-slate-400">
         <p>© 2026 Computer Shop. All rights reserved.</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-slate-700 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-slate-700 transition-colors">Terms of Service</a>
-          <a href="#" class="hover:text-slate-700 transition-colors">Shipping Info</a>
+          <a href="#" class="hover:text-slate-700 transition-colors dark:hover:text-slate-300">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-700 transition-colors dark:hover:text-slate-300">Terms of Service</a>
+          <a href="#" class="hover:text-slate-700 transition-colors dark:hover:text-slate-300">Shipping Info</a>
         </div>
       </div>
     </div>

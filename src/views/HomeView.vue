@@ -187,6 +187,7 @@ onMounted(loadHome)
           description="Find the right hardware faster with focused sections for everyday buyers and serious builders."
           action-label="All categories"
           action-to="/categories"
+          class="dark-mode-black-text"
         />
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <CategoryCard
@@ -206,6 +207,7 @@ onMounted(loadHome)
           description="Balanced picks for gaming, design work, office upgrades, and home setups."
           action-label="View products"
           action-to="/products"
+          class="dark-mode-black-text"
         />
         <BaseAlert v-if="notice" variant="success" dismissible class="mb-6">
           {{ notice }}
@@ -227,6 +229,7 @@ onMounted(loadHome)
           eyebrow="Fresh stock"
           title="New arrivals"
           description="Recently added laptops, displays, components, and accessories."
+          class="dark-mode-black-text"
         />
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <ProductCard

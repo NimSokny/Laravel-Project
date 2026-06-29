@@ -100,20 +100,20 @@ watch(open, (value) => {
         >
           <div
             v-if="open"
-            class="relative w-full bg-white rounded-xl shadow-2xl"
+            class="relative w-full bg-white rounded-xl shadow-2xl dark:bg-slate-800"
             :class="sizeClasses"
             @click.stop
           >
-            <div v-if="title || closable" class="flex items-center justify-between px-6 py-4 border-b border-slate-200">
-              <h2 v-if="title" class="text-lg font-bold text-slate-900">{{ title }}</h2>
+            <div v-if="title || closable" class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-700">
+              <h2 v-if="title" class="text-lg font-bold text-slate-900 dark:text-slate-100">{{ title }}</h2>
               <button
                 v-if="closable"
                 type="button"
-                class="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                class="p-2 rounded-lg hover:bg-slate-100 transition-colors dark:hover:bg-slate-700"
                 @click="close"
                 aria-label="Close modal"
               >
-                <svg class="size-5 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="size-5 text-slate-500 dark:text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -121,7 +121,7 @@ watch(open, (value) => {
             <div class="px-6 py-4">
               <slot />
             </div>
-            <div v-if="$slots.footer" class="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-xl">
+            <div v-if="$slots.footer" class="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-xl dark:border-slate-700 dark:bg-slate-900">
               <slot name="footer" />
             </div>
           </div>

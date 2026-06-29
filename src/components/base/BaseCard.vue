@@ -27,10 +27,10 @@ const baseClasses = computed(() => [
 
 const variantClasses = computed(() => {
   const variants = {
-    default: 'bg-white border border-slate-200 shadow-sm',
-    elevated: 'bg-white shadow-md',
-    outlined: 'bg-white border-2 border-slate-200',
-    flat: 'bg-slate-50',
+    default: 'bg-white border border-slate-200 shadow-sm dark:bg-slate-800 dark:border-slate-700',
+    elevated: 'bg-white shadow-md dark:bg-slate-800',
+    outlined: 'bg-white border-2 border-slate-200 dark:bg-slate-800 dark:border-slate-600',
+    flat: 'bg-slate-50 dark:bg-slate-800',
   }
   return variants[props.variant]
 })

@@ -168,25 +168,25 @@ onMounted(loadFilters)
 </script>
 
 <template>
-  <main class="min-h-screen bg-slate-50">
+  <main class="min-h-screen bg-slate-50 dark:bg-slate-900">
     <!-- Sticky Search Header -->
-    <div class="sticky top-0 z-40 border-b border-slate-200 bg-white shadow-sm">
+    <div class="sticky top-0 z-40 border-b border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900">
       <div class="container-shell py-4">
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <!-- Search Bar -->
           <div class="relative flex-1 max-w-2xl">
-            <Search class="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-slate-400" aria-hidden="true" />
+            <Search class="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-slate-400 dark:text-slate-500" aria-hidden="true" />
             <input
               v-model="filters.search"
               type="search"
               placeholder="Search products..."
-              class="w-full rounded-xl border border-slate-300 bg-slate-50 pl-12 pr-4 py-3 text-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+              class="w-full rounded-xl border border-slate-300 bg-slate-50 pl-12 pr-4 py-3 text-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-white"
               @input="applyFilters()"
             />
             <button
               v-if="filters.search"
               type="button"
-              class="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg bg-slate-200 p-1.5 text-slate-500 hover:bg-slate-300 transition-colors"
+              class="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg bg-slate-200 p-1.5 text-slate-500 hover:bg-slate-300 transition-colors dark:bg-slate-700 dark:text-slate-400 dark:hover:bg-slate-600"
               @click="filters.search = ''; applyFilters()"
             >
               <X class="size-4" aria-hidden="true" />
@@ -197,7 +197,7 @@ onMounted(loadFilters)
           <div class="flex items-center gap-3">
             <button
               type="button"
-              class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50"
+              class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
               @click="showFilters = !showFilters"
             >
               <SlidersHorizontal class="size-4" aria-hidden="true" />
@@ -209,7 +209,7 @@ onMounted(loadFilters)
 
             <select
               v-model="filters.sort"
-              class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20"
+              class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
               @change="applyFilters()"
             >
               <option value="latest">Latest</option>
@@ -260,7 +260,7 @@ onMounted(loadFilters)
     <!-- Products Section -->
     <div class="container-shell py-8">
       <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h1 class="text-2xl font-bold text-slate-900 font-accent">
+        <h1 class="text-2xl font-bold text-slate-900 font-accent dark:text-white">
           {{ total }} product{{ total === 1 ? '' : 's' }} found
         </h1>
         <BaseAlert v-if="notice" variant="success" dismissible class="sm:w-auto">
