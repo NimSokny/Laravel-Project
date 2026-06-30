@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { LogIn } from '@lucide/vue'
 import BaseAlert from '@/components/base/BaseAlert.vue'
@@ -16,6 +16,17 @@ const form = reactive({
   email: '',
   password: '',
 })
+
+const emailReadonly = ref(true)
+const passwordReadonly = ref(true)
+
+function handleEmailFocus() {
+  emailReadonly.value = false
+}
+
+function handlePasswordFocus() {
+  passwordReadonly.value = false
+}
 
 async function submitLogin() {
   await auth.login(form)
@@ -55,7 +66,9 @@ async function submitLogin() {
             label="Email"
             placeholder="you@example.com"
             required
-            autocomplete="email"
+            autocomplete="off"
+            :readonly="emailReadonly"
+            @focus="handleEmailFocus"
           />
           <BaseInput
             v-model="form.password"
@@ -63,7 +76,9 @@ async function submitLogin() {
             label="Password"
             placeholder="••••••••"
             required
-            autocomplete="current-password"
+            autocomplete="off"
+            :readonly="passwordReadonly"
+            @focus="handlePasswordFocus"
           />
           <BaseAlert v-if="auth.state.error" variant="error" dismissible>
             {{ auth.state.error }}
